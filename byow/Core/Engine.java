@@ -140,7 +140,7 @@ public class Engine {
         StdDraw.setFont(headerFont);
         StdDraw.setPenColor(StdDraw.WHITE);
         StdDraw.clear(StdDraw.BLACK);
-        StdDraw.text((double) welcomePageWidth / 2, (double) welcomePageHeight - 15, "CS61B: THE GAME");
+        StdDraw.text((double) welcomePageWidth / 2, (double) welcomePageHeight - 15, "MAN & BRICK");
         Font menuFont = new Font("Monaco", Font.PLAIN, 20);
         StdDraw.setFont(menuFont);
         StdDraw.text((double) welcomePageWidth / 2, (double) welcomePageHeight / 2, "New Game (N)");
@@ -1118,29 +1118,29 @@ public class Engine {
         if (playerIndex == 0) {
             if ((avatarA.getX() == exitDoor.getX()) && (avatarA.getY() == exitDoor.getY())) {
                 playerRedScore += exitValue;
-                endGameMessage = "YEAH! " + playerList.get(playerIndex) + " Find the Right Door! ";
+                endGameMessage = "YEAH! " + playerList.get(playerIndex) + " found the right exit!";
             } else {
                 playerRedScore -= exitValue;
-                endGameMessage = "OOPS! " + playerList.get(playerIndex) +  " Find the Wrong Door! ";
+                endGameMessage = "OOPS! " + playerList.get(playerIndex) +  " found the wrong exit!";
             }
         }
 
         if (playerIndex == 1) {
             if ((avatarB.getX() == exitDoor.getX()) && (avatarB.getY() == exitDoor.getY())) {
                 playerBlueScore += exitValue;
-                endGameMessage = "YEAH! " + playerList.get(playerIndex) + " Find the Right Door! ";
+                endGameMessage = "YEAH! " + playerList.get(playerIndex) + " found the right exit!";
             } else {
                 playerBlueScore -= exitValue;
-                endGameMessage = "OOPS! " + playerList.get(playerIndex) +  " Find the Wrong Door! ";
+                endGameMessage = "OOPS! " + playerList.get(playerIndex) +  " found the wrong exit!";
             }
         }
 
         Color winnerColor = StdDraw.WHITE;
         if (playerRedScore > playerBlueScore) {
-            winnerMessage = playerList.get(0) + " WIN! ";
+            winnerMessage = playerList.get(0) + " WON! ";
             winnerColor = StdDraw.RED;
         } else if (playerRedScore < playerBlueScore) {
-            winnerMessage = playerList.get(1) + " WIN! ";
+            winnerMessage = playerList.get(1) + " WON! ";
             winnerColor = StdDraw.BLUE;
         } else {
             winnerMessage = "Draw Game!";

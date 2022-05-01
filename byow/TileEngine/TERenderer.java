@@ -133,6 +133,8 @@ public class TERenderer {
                     throw new IllegalArgumentException("Tile at position x=" + x + ", y=" + y
                             + " is null.");
                 }
+                world[x][y].draw(x + xOffset, y + yOffset);
+                /**red
                 if (((Math.abs(x-X1) <= xVision / 2.0) && (Math.abs(y-Y1) <= yVision / 2.0))
                         || ((Math.abs(x-X2) <= xVision / 2.0) && (Math.abs(y-Y2) <= yVision / 2.0))) {
                     world[x][y].draw(x + xOffset, y + yOffset);
@@ -143,6 +145,7 @@ public class TERenderer {
                         || ((Math.abs(x-X2) <= xVision) && (Math.abs(y-Y2) <= yVision))){
                     world[x][y].drawDarkerDarker(x + xOffset, y + yOffset);
                 }
+                 **/
             }
         }
         StdDraw.show();
